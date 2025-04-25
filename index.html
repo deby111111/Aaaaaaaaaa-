@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Receitas Deliciosas e Simples</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      color: #333;
+    }
+
+    header {
+      background-color: #f2a154;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .cabecalho-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      width: 100px;
+      height: auto;
+    }
+
+    .texto-cabecalho h1 {
+      font-size: 2.2em;
+      margin: 0;
+    }
+
+    .texto-cabecalho p {
+      font-size: 1.2em;
+      margin: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 10px 0 0 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .receita {
+      margin-bottom: 40px;
+    }
+
+    .receita img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      display: block;
+      margin: 10px 0;
+    }
+
+    button {
+      background-color: #f2a154;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #d88b2a;
+    }
+
+    /* Estilo de alto contraste */
+    .alto-contraste {
+      background-color: #000 !important;
+      color: yellow !important;
+    }
+
+    .alto-contraste a {
+      color: cyan !important;
+    }
+
+    /* Botão de acessibilidade */
+    .menu-acessibilidade {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 999;
+    }
+
+    .opcoes-acessibilidade {
+      background-color: #f8f9fa;
+      padding: 10px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .alto-contraste header,
+    .alto-contraste footer {
+      background-color: #000 !important;
+      color: yellow !important;
+    }
+
+    .alto-contraste h1,
+    .alto-contraste h2,
+    .alto-contraste p {
+      color: yellow !important;
+    }
+
+    .alto-contraste .btn-primary {
+      background-color: #FFD700 !important;
+      color: black !important;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="cabecalho-container">
+      <img src="file_00000000788861f7896e51a8fe4f15ff_conversation_id=6806950b-95a8-8006-b39d-30cd411a6f8d (2).png" alt="Logo do site" class="logo">
+      <div class="texto-cabecalho">
+        <h1>Receitas Deliciosas e Simples</h1>
+        <p>Encontre aqui as melhores receitas para o seu dia a dia!</p>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Página Principal</a></li>
+        <li><a href="dicas.html">Dicas de Cozinha</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="acessibilidade" class="menu-acessibilidade">
+    <div id="opcoes-acessibilidade" class="opcoes-acessibilidade">
+      <button onclick="alterarFonte(1)" class="btn btn-primary fw-bold" aria-label="Aumentar o tamanho da fonte">A+</button>
+      <button onclick="alterarFonte(-1)" class="btn btn-primary fw-bold" aria-label="Diminuir o tamanho da fonte">A-</button>
+      <button onclick="toggleContraste()" class="btn btn-primary fw-bold" aria-label="Alternar o contraste de cores">
+        <i class="bi bi-shadows"></i>
+      </button>
+    </div>
+  </div>
+
+  <main id="principal">
+    <!-- RECEITAS -->
+    <section id="destaque">
+      <h2>Bolo de caneca de chocolate</h2>
+      <article>
+        <img src="20250421_153318.png" alt="Foto de um delicioso bolo de caneca de chocolate">
+        <p>Para essa receita, vamos precisar de: 4 colheres de sopa de farinha de trigo, 4 colheres de sopa de açúcar, 2 colheres de sopa de chocolate em pó, 1 ovo, 3 colheres de sopa de leite, 3 colheres de sopa de óleo, e 1/2 colher de chá de fermento em pó. Como fazer: Misture tudo na caneca e leve ao micro-ondas por 3 minutos. E tá pronto!</p>
+        <a href="#bolo-cenoura">Ver receita completa</a>
+      </article>
+    </section>
+
+    <section id="destaque">
+      <h2>Pão de queijo de frigideira</h2>
+      <article>
+        <img src="20250421_153543.png" alt="Foto de pão de queijo de frigideira">
+        <p>1 ovo, 2 colheres de sopa de tapioca, 2 colheres de sopa de queijo ralado, 1 colher de chá de requeijão ou creme de leite e uma pitada de sal. Misture, despeje em uma frigideira e doure dos dois lados. Tá pronto!</p>
+        <a href="#pao-queijo">Ver receita completa</a>
+      </article>
+    </section>
+
+    <section id="destaque">
+      <h2>Omelete de forno na caneca</h2>
+      <article>
+        <img src="20250421_153818.png" alt="Foto de omelete na caneca">
+        <p>2 ovos, 2 colheres de sopa de leite, presunto, queijo, tomate (opcional), sal e orégano. Misture na caneca e leve ao micro-ondas por 2 a 3 minutos. Pronto!</p>
+        <a href="#omelete">Ver receita completa</a>
+      </article>
+    </section>
+
+    <section id="destaque">
+      <h2>Cookies de banana com aveia</h2>
+      <article>
+        <img src="20250421_154153.png" alt="Foto de cookies de banana com aveia">
+        <p>1 banana madura, 4 colheres de aveia em flocos, 1 colher de chá de canela. Misture, modele e asse por 15 a 20 min a 180°C. Pronto!</p>
+        <a href="#cookies">Ver receita completa</a>
+      </article>
+    </section>
+
+    <section id="destaque">
+      <h2>Batata rústica no forno</h2>
+      <article>
+        <img src="20250421_153952.png" alt="Foto de batata rústica assada">
+        <p>2 batatas médias, azeite, alho em pó, orégano, páprica e sal. Corte, tempere e asse por 35 a 40 min a 200°C. Crocante por fora, macia por dentro!</p>
+        <a href="#batata">Ver receita completa</a>
+      </article>
+    </section>
+
+    <section id="destaque">
+      <h2>Mousse de maracujá com 3 ingredientes</h2>
+      <article>
+        <img src="20250421_154337.png" alt="Foto de mousse de maracujá">
+        <p>1 leite condensado, 1 creme de leite, 1 copo de suco de maracujá. Bata, coloque em potinhos e leve à geladeira por 2 horas. Pronto!</p>
+        <a href="#mousse">Ver receita completa</a>
+      </article>
+    </section>
+  </main>
+
+  <script>
+    let tamanhoAtual = 100;
+    function alterarFonte(valor) {
+      tamanhoAtual += valor * 10;
+      if (tamanhoAtual < 60) tamanhoAtual = 60;
+      if (tamanhoAtual > 200) tamanhoAtual = 200;
+      document.getElementById('principal').style.fontSize = tamanhoAtual + '%';
+    }
+
+    function toggleContraste() {
+      document.body.classList.toggle('alto-contraste');
+    }
+  </script>
+</body>
+</html>
